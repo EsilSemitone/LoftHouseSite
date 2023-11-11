@@ -24,6 +24,18 @@ a {
 
 .container {
     margin: 0 auto;
-    width: 1130px;
+    max-width: 1130px;
     padding: 0 15px;
+}
+
+.title-2 {
+    font-family: $font-accent;
+    color: $accent;
+    font-size: 36px;
+    
+}
+
+.link-bold {
+    color: $accent;
+    font-weight: 700;
 }

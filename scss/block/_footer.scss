@@ -1,0 +1,38 @@
+.footer {
+    background-color: $footer-bg;
+    padding: 72px 0 51px 0;
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer__logo {
+    margin-top: -12px;
+}
+.footer__nav {
+
+}
+
+.footer__addres {
+
+}
+
+.footer_nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    font-size: 14px;
+    &:nth-child(4) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__social-links {
+    margin-top: 5px;
+    display: flex;
+    column-gap: 21px;
+    align-items: center;
+}

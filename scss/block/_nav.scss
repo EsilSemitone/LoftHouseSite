@@ -3,7 +3,64 @@
 }
 
 .nav__list {
+    // position: relative;
     display: flex;
     column-gap: 40px;
     
+}
+
+.nav__item-inner {
+    position: relative;
+}
+
+.nav__item {
+    &::before {
+        opacity: 1;
+        content: '';
+
+        position: absolute;
+        left: 0px;
+        bottom: -5px;
+        width: 0%;
+        height: 4%;
+        border-radius: 50%;
+
+        background-color: $accent;
+        transition:  all 0.5s;
+    }
+
+    &::after {
+        opacity: 1;
+        content: '';
+
+        position: absolute;
+        right: 0px;
+        top: -5px;
+        width: 0%;
+        height: 4%;
+        border-radius: 50%;
+
+        background-color: $accent;
+        transition:  all 0.5s;
+
+    }
+
+    &:hover::before {
+        animation: anim 0.5s linear alternate;
+        width: 100%;
+    }
+
+    &:hover::after {
+        animation: anim 0.5s linear alternate;
+        width: 100%;
+    }
+
+    @keyframes anim {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
 }

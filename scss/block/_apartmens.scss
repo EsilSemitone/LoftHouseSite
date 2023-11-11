@@ -1,0 +1,113 @@
+.apartments {
+    position: relative;
+    min-height: 806px;
+
+    &::after {
+        position: absolute;
+        content: "III";
+
+        top: 0;
+        left: calc(50% - 550px);
+        transform: translate(-50%, -10%);
+        
+        opacity: 0.02;
+
+        font-size: 400px;
+        font-family: $font-accent;
+
+     }
+}
+
+.appartmans__title {   
+    margin-bottom: 88px;
+}
+
+
+
+.appartmens__cards {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    
+
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    transition: all 0.5s;
+
+    &::before {
+        content: '';  
+        position: absolute;
+        z-index: 6;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0.00) 0.01%, #242B33 100%)
+        
+    }
+
+    &::after {
+        z-index: 7;
+        opacity: 1;
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        transition: all 0.5s;
+    }
+
+
+    &:hover::after {
+        transition: all 0.5s;
+        border: 3px double rgba(255, 255, 255, 0.4);  
+        animation: benefits 0.2s linear;
+    }
+
+    @keyframes benefits {
+        0% {
+            border: 1px double rgba(255, 255, 255, 0.4);
+            left: 0%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+        }
+
+        100% {
+            border: 3px double rgba(255, 255, 255, 0.4);
+            left: 15px;
+            top: 15px;
+            right: 15px;
+            bottom: 15px;
+        }
+    }
+    
+    
+}
+
+.card__image {
+    transition: transform 0.5s ease-in;
+    position: relative;
+    z-index: 5;
+}
+
+.card:hover .card__image {   
+    transform: scale(1.1)
+    
+}
+
+.card__title {
+    position: absolute;
+    left: 50px;
+    right: 20px;
+    bottom: 44px;
+    font-size: 24px;
+    z-index: 7;
+}
+
