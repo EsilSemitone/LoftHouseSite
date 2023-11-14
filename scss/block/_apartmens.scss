@@ -3,23 +3,22 @@
     min-height: 806px;
 
     &::after {
-        position: absolute;
         content: "III";
 
-        top: 0;
         left: calc(50% - 550px);
         transform: translate(-50%, -10%);
         
-        opacity: 0.02;
-
-        font-size: 400px;
-        font-family: $font-accent;
+        @include decorNumber
 
      }
 }
 
 .appartmans__title {   
     margin-bottom: 88px;
+
+    @include mediumSize {
+        text-align: center;
+    }
 }
 
 
@@ -29,6 +28,7 @@
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
+    text-align: center;
     
 
 }

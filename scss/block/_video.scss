@@ -3,6 +3,7 @@
     position: relative;
 
     &::after {
+        display: none;
         position: absolute;
         content: "IV";
 

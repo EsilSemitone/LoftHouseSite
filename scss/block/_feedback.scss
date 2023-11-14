@@ -12,6 +12,12 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     align-items: center;
+
+    @include mediumSize {
+        grid-template-columns: repeat(2, 2fr);
+        row-gap: 20px
+        
+    }
 }
 
 

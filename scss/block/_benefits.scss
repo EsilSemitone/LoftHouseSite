@@ -3,18 +3,13 @@
     position: relative;
 
      &::after {
-        position: absolute;
+        display: none;
         content: "II";
 
-        top: 0;
+        // top: 0;
         left: calc(50% + 550px);
         transform: translate(-50%, 0%);
-        
-        opacity: 0.02;
-
-        font-size: 400px;
-        font-family: $font-accent;
-
+        @include decorNumber 
      }
 }
 
@@ -22,6 +17,14 @@
     display: flex;
     justify-content: center;
     column-gap: 70px;
+
+    @include mediaTablet {
+        column-gap: 30px;
+    }
+
+    @include mediumSize {
+        column-gap: 20px;
+    }
 }
 
 .benefits__item {
