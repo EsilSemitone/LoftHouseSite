@@ -7,6 +7,7 @@ btns.forEach((btn) => btn.addEventListener('click', function() {
     nav.classList.toggle('nav__list-large')
     // nav.classList.toggle('nav__list')
     
+   
     
 }))
 

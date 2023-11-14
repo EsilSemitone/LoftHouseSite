@@ -239,6 +239,11 @@ a:hover {
   position: relative;
 }
 
+@media screen and (max-width: 992px) {
+  .nav__item {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 762px) {
   .nav__item {
     padding: 0;
