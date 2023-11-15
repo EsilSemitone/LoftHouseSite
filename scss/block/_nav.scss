@@ -23,19 +23,22 @@
 }
 
 .nav {
-    // transition: all 0.5s ease-in;
 }
 
 .header__nav-btn {
+    
     display: none;
     @media screen and (max-width: 992px) {
         display: block;
     }
 }
 
+.material-symbols-outlined {
+    text-align: right;
+}
 
 .nav__list {
-    transition: width 0.5s ease-in;
+    transition: width 0.3s ease-in;
     position: relative;
     display: flex;
     column-gap: 40px;
@@ -43,7 +46,7 @@
     // margin-right: 40px;
 
     @include mediaTablet {
-        column-gap: 30px;
+        column-gap: 40px;
         display: flex;
         position: fixed ;
         top: 0px;
@@ -55,19 +58,20 @@
         
         row-gap: 20px;  
         backdrop-filter: blur(10px);
-        transition: backdrop-filter 0.2s ease-in;
         height: 100svh;
         z-index: 10;
-    }    
+    }   
+    
+    
 }
 
 .btn {
     text-align: center;
 }
 
+
 .nav__list-large {
-    transition: width 0.5s ease-in;
-    column-gap: 50px;
+    // column-gap: 50px;
     display: flex;
     position: fixed ;
     top: 0px;
@@ -75,24 +79,37 @@
     padding: 50px 0;
     text-align: center;
     width: 300px;
+    transition: width 0.3s ease-in;
     flex-direction: column;
     
-    row-gap: 20px;  
+    row-gap: 35px;  
     backdrop-filter: blur(10px);
     
     height: 100svh;
     z-index: 10;  
+
+    @include smallSize {
+        width: 100%;
+    }
 }
 
 .nav__item-inner {
     position: relative;
 }
 
-.nav__item {
-
+.nav__list>.nav__item {
     @include mediaTablet {
         font-size: 20px;
     }
+}
+
+.nav__list>.nav__item-inner>.nav__item {
+    @include mediaTablet {
+        font-size: 20px;    
+    }
+}
+
+.nav__item {
 
     @include mediumSize {
         padding: 0;

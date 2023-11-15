@@ -16,6 +16,11 @@
 
 .section-map__title {
     margin-bottom: 88px;
+
+    @include mediaTablet {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 }
 
 

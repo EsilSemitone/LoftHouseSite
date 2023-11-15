@@ -16,7 +16,7 @@
 .appartmans__title {   
     margin-bottom: 88px;
 
-    @include mediumSize {
+    @include mediaTablet {
         text-align: center;
     }
 }

@@ -15,6 +15,10 @@
 
 .cta__title {
     margin-bottom: 17px;
+
+    @include mediumSize {
+        text-align: center;
+    }
     
 }
 
@@ -22,14 +26,26 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    
 
+
+    @include mediumSize {
+        grid-template-columns: 2fr;
+        gap: 30px;
+    }
+  
 }
 
 .cta__text {
     line-height: 1.56
 }
 
+.cta__wrapper>.cta__form {
+    @include smallSize {
+        grid-template-columns: 2fr;
+        gap: 30px;
+    }
+}
+
 .cta__form {
-  
+    
 }
