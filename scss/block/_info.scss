@@ -4,6 +4,10 @@
 
     padding-left: 35px;
 
+    @include smallSize {
+        // padding-left: 10px;
+    }
+
     &::before {
         content: "";
 

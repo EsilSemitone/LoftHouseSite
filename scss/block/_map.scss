@@ -1,9 +1,10 @@
 .section-map {
     padding: 180px 0;
     position: relative ;
+    overflow-x: hidden;
 
     &::before {
-        display: none;
+        // display: none;
         content: "V";
 
         right: calc(50% + 550px);

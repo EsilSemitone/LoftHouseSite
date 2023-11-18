@@ -36,6 +36,10 @@
     font-size: 48px;
     font-family: $font-accent;
     // border: 1px solid gray;
+
+    @include smallSize {
+        font-size: 30px;
+    }
 }
 
 
@@ -54,7 +58,19 @@
     .text-right {
         text-align: right;
     }
+
+    @include smallSize {
+        grid-template-columns: 2fr;
+        gap: 30px;
+        margin: 0 auto;
+
+        .text-right {
+            text-align: center;
+        }
+
+    }
 }
+
 
 
 

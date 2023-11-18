@@ -143,6 +143,11 @@ a:hover {
   font-size: 48px;
   font-family: "Playfair Display", serif;
 }
+@media screen and (max-width: 576px) {
+  .header__title {
+    font-size: 30px;
+  }
+}
 
 .header__title-icon {
   position: absolute;
@@ -158,6 +163,16 @@ a:hover {
 }
 .header__footer .text-right {
   text-align: right;
+}
+@media screen and (max-width: 576px) {
+  .header__footer {
+    grid-template-columns: 2fr;
+    gap: 30px;
+    margin: 0 auto;
+  }
+  .header__footer .text-right {
+    text-align: center;
+  }
 }
 
 .nav {
@@ -325,9 +340,10 @@ a:hover {
 .benefits {
   padding: 120px 0;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .benefits::after {
-  display: none;
   content: "II";
   left: calc(50% + 550px);
   transform: translate(-50%, 0%);
@@ -354,6 +370,15 @@ a:hover {
   .benefits__row {
     -moz-column-gap: 20px;
          column-gap: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .benefits__row {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 30px;
   }
 }
 
@@ -558,9 +583,9 @@ a:hover {
 .video {
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
 }
 .video::after {
-  display: none;
   position: absolute;
   content: "IV";
   top: 0;
@@ -606,9 +631,9 @@ a:hover {
 .section-map {
   padding: 180px 0;
   position: relative;
+  overflow-x: hidden;
 }
 .section-map::before {
-  display: none;
   content: "V";
   right: calc(50% + 550px);
   transform: translate(50%, 23%);

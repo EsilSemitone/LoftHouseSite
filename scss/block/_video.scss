@@ -1,9 +1,10 @@
 .video {
     margin: 0 auto;
     position: relative;
+    overflow-x: hidden;
 
     &::after {
-        display: none;
+        // display: none;
         position: absolute;
         content: "IV";
 
