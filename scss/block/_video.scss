@@ -2,6 +2,7 @@
     margin: 0 auto;
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     &::after {
         // display: none;
@@ -20,11 +21,35 @@
      }
 }
 
-.video__link {
+#player {
+    display: none;
+    margin: 0 auto;
+    min-height: 500px;
+    min-width: 1000px;
+    
+}
+
+.video__images {
+    display: block;
+}
+
+.video__link--mask {
+    margin: 0 auto;
     position: relative;
     display: block;
     text-align: center;
-    
+    // z-index: -1;
+}
+
+.video__link {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
     
     
 
@@ -66,4 +91,5 @@
 }
 
 .video__image {
+    
 }

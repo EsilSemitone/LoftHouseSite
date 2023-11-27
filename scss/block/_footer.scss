@@ -28,6 +28,10 @@
     &:nth-child(4) {
         margin-bottom: 20px;
     }
+
+    @include extraSmallSize {
+        font-size: 10px;
+    }
 }
 
 .footer__social-links {

@@ -31,4 +31,11 @@
     }   
 }
 
+@mixin extraSmallSize {
+    //mixin for <546px size
+    @media screen and (max-width: $extraSmall) {
+        @content
+    }
+}
+
 

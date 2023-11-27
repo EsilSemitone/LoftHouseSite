@@ -426,6 +426,11 @@ a:hover {
   gap: 30px;
   text-align: center;
 }
+@media screen and (max-width: 500px) {
+  .appartmens__cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 
 .card {
   overflow: hidden;
@@ -584,6 +589,7 @@ a:hover {
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .video::after {
   position: absolute;
@@ -596,10 +602,32 @@ a:hover {
   font-family: "Playfair Display", serif;
 }
 
-.video__link {
+#player {
+  display: none;
+  margin: 0 auto;
+  min-height: 500px;
+  min-width: 1000px;
+}
+
+.video__images {
+  display: block;
+}
+
+.video__link--mask {
+  margin: 0 auto;
   position: relative;
   display: block;
   text-align: center;
+}
+
+.video__link {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.video__link:hover {
+  cursor: pointer;
 }
 .video__link::before {
   content: "";
@@ -717,6 +745,11 @@ a:hover {
 }
 .footer_nav__list:nth-child(4) {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 500px) {
+  .footer_nav__list {
+    font-size: 10px;
+  }
 }
 
 .footer__social-links {
